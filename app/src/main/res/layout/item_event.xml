@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/backgroung_white_ripple"
+    android:clickable="true"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/event_img"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:background="@color/colorBlack5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/event_img"
+        app:layout_constraintEnd_toStartOf="@id/layout_type_event">
+
+        <TextView
+            android:id="@+id/txt_event_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/nunito_bold"
+            android:maxLines="2"
+            android:text="Tết Nguyên Đán\nTees"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/txt_solar_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Thứ 3, 12 tháng 2"
+            android:textColor="@color/colorBlack"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txt_lunar_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thứ 3, 12 tháng 2"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/layout_alarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/img_alarm_clock"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:padding="2dp"
+                android:tint="@color/colorPurple"
+                android:src="@drawable/ic_alarm"
+                android:visibility="visible" />
+            <TextView
+                android:id="@+id/txt_time_alarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                android:textColor="@color/colorPurple"
+                android:text="9h30 thứ 2 , 12 tháng 2"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_type_event"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <ImageView
+            android:id="@+id/img_type_day"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_calendar_solar"/>
+        <TextView
+            android:id="@+id/txt_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cả ngày"
+            android:textSize="12sp"
+            android:textColor="@color/colorBlack"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
